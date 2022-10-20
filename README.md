@@ -21,3 +21,7 @@ For the flexibility of the different configurations of MU-MIMO we use Netgear Ni
 ```
 sudo apt install tftp 
 ```
+2. Plug the ethernet cable to the computer and LAN port 4 of the router (actually any LAN port should be ok). Make the IP address of the connected ethernet port of the PC as following:
+IP address: anything in 192.168.1.2 - 192.168.1.253
+Subnet mask: 255.255.255.0
+Default Gateway: 192.168.1.1
