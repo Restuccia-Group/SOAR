@@ -8,8 +8,8 @@ We devide this whole system into several sections as follows:
 
 ##### **1. Device Configurations**
 ##### **2. Setup the MU-MIMO**
-##### **3. Accessing and Configuring the Network Remotely
-##### **4. Data Offloading 
+##### **3. Accessing and Configuring the Network Remotely**
+##### **4. Data Offloading** 
 
 ## 1. Device Confifurations 
 
