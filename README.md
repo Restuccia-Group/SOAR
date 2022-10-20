@@ -25,3 +25,16 @@ sudo apt install tftp
 *IP address: anything in 192.168.1.2 - 192.168.1.253 <br />
 Subnet mask: 255.255.255.0  <br />
 Default Gateway: 192.168.1.1 <br />*
+
+### Flash with OpenWrt
+
+1. Turn off the power, push and hold the reset button (in a hole on backside) with a pin
+2. While still holding the reset button, turn on the power, and the power led starts flashing white (after it first flashes orange for a while)
+3. Release the reset button after the power led flashes white (for at least 10 times), immediately execute the tftp command on your computer. 
+```
+tftp -i [router IP] put [firmware filename].[file format]
+```
+For our case, it would be: 
+``` 
+tftp -i 192.168.1.1 put openwrt-22.03.2_r7800-squashfs.img
+```
