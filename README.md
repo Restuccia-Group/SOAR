@@ -17,4 +17,4 @@ For the flexibility of the different configurations of MU-MIMO we use Netgear Ni
 
 ### Prerequisites for TFTP flashing
 
-**i.**A TFTP client for our computer. In Ubuntu, install it with '''  sudo apt install tftp '''
+**i. ** A TFTP client for our computer. In Ubuntu, install it with '''  sudo apt install tftp '''
