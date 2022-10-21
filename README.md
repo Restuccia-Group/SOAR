@@ -120,9 +120,13 @@ STA3: 192.168.1.4 <br/>*
 
 ### Setup AP and STAs
 
-**Setup AP:** To set up the AP, we scp the ".conf"  file to the target device. please find required configure file: **"hostapd_ch_149_bw80.conf"** in MU-MIMO Configuration directory. 
+**Setup AP:** To set up the AP, we scp the "MU-MIMO_Configuration/AP" directory to the target device:
+
+On the host machine:
 ```
-scp hostapd_ch_149_bw80.conf root@192.168.1.1:/root/
+scp -r AP root@192.168.1.1:/root/
 ```
+
+On R7800, run : ``` Run_AP_C_1_N_1.sh ``` or ``` Run_AP_C_2_N_2.sh ``` or ``` Run_AP_C_3_N_3.sh ``` depending on the configuration that you want to do. They are respectively for 1-antenna-1-stream, 2-antenna-2-stream, 3-antenna-3-stream.
 
 
