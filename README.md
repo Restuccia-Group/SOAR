@@ -159,5 +159,5 @@ Now, run ```./start_client_N_1_C_1.sh``` or ```start_client_N_1_C_1.sh``` or ```
 **NOW**
 It's time for trying out the MU-MIMO system that we have setup. SSH to the *AP* with ``` ssh root@192.168.1.1 ```.
 ```
-**The scripts that we executed earlier, set up the WLAN ip of the AP as 192.168.10.1 and STA1, STA2 and STA3 as 192.168.10.2, 192.168.10.3 and 192.168.10.4 respectively**
+The scripts that we executed earlier, set up the WLAN ip of the AP as 192.168.10.1 and STA1, STA2 and STA3 as 192.168.10.2, 192.168.10.3 and 192.168.10.4 respectively.
 ```
