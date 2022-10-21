@@ -136,9 +136,26 @@ Now you should be able to see, a network name **test5G** when you scan for avail
 On the host machine: 
 
 ```
-scp -r AP root@192.168.1.x:/root/                 here, x=2/3/4
+scp -r STAs root@192.168.1.x:/root/                 here, x=2/3/4
 ```
+Next, connect the STA to the created WLAN: **test5G.** Please be in the STAs directory of the R7800 at first by ssh-ing and then ``` cd /root/STAs```
 
+Then, 
 
+```
+wpa_supplicant -B -i#interface -Dnl80211 -c wpa_supplicant.conf
+```
+In our case the interface is wlan0, 
 
+```
+wpa_supplicant -B -iwlan0 -Dnl80211 -c wpa_supplicant.conf
+```
+It will online work if you have "systemd-networkd" daemon enabled which is in there in OpenWrt by default. However, other OS like Ubuntu 20.04 might not have "systemd-networkd" enabled or installed by default as it manages the network with "NetworkManager service". In those cases, you can connect your device with GUI or *nmcli* tool. 
 
+This can be generalized to any device/ OS and the Network Interface Card (NIC) which allows you to change the number of antennas and spatial streams. We have tested NGW8265, AX200 and AX2100. (We will keep updating the list).
+
+Now, run ```./start_client_N_1_C_1.sh``` or ```start_client_N_1_C_1.sh``` or ```start_client_N_1_C_1.sh``` respectively for 1-antenna-1-stream, 2-antenna-2-stream and 3-antenna-3-stream respectively. 
+
+**NOW**
+It's time for trying out the MU-MIMO system that we have setup. SSH to the *AP* with ``` ssh root@192.168.1.1 ```.
+**The scripts that we executed earlier, set up the WLAN ip of the AP as 192.168.10.1 and STA1, STA2 and STA3 as 192.168.10.2, 192.168.10.3 and 192.168.10.4 respectively**
