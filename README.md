@@ -104,12 +104,13 @@ then, lets change the default IP to 192.168.1.2 and we name it as STA1,
 ```
 ifconfig br-lan 192.168.1.2
 ```
-Your terminal should freeze and log you out of the GUI if you were logged in. Please give it some time,close the terminal and open a new one to log back in with new LAN-IP: 192.168.1.2.
-5. Setup the other two devices with the following configuration: <br/>
-*
-STA2: 192.168.1.3 <br/>
-STA3: 192.168.1.4 <br/>
-*
+Your terminal should freeze and log you out of the GUI if you were logged in. Please give it some time,close the terminal and open a new one to log back in with new LAN-IP: 192.168.1.2. 
+<br/>
+4. Setup the other two devices with the following configuration: <br/>
+
+*STA2: 192.168.1.3 <br/>
+STA3: 192.168.1.4 <br/>*
+
 <br/>
 <br/>
 **However, in no way it is mandatory to have the exact same IP as mentioned above, I have only done so to maintain a certain pattern to make me remmber easily.**
