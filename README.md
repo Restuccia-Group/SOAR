@@ -92,4 +92,23 @@ Now, let's setup the MU-MIMO
 
 For setting up a MU-MIMO system with IEEE802.11ac, at first we need to setup a network with proper configuration. For this, the required configuration files are provided in "MU-MIMO_Configuration" folder. 
 
-1. At first, 
+### Configure IP and Connection
+
+1. I assume that, you followed the earlier steps to setup the devices. In that case, all the routers should have the same LAN-IP: 192.168.1.1. I also assume you have at least total of 3 device to setup the multi-user network. I have four devices, so I will setup one of the device as AP and other as STAs. 
+2. Now we connect each of the device one by one to our host machine with an ethernet cable as described earlier and change the LAN-IP of them except for one device, for which we will keep the LAN-IP as 192.168.1.1 and setup as the AP.   
+3. To change the  LAN-IP of any device, at first ssh with the default OpenWrt IP: 192.168.1.1 with 
+```
+ssh root@192.168.1.1
+```
+then, lets change the default IP to 192.168.1.2 and we name it as STA1,
+```
+ifconfig br-lan 192.168.1.2
+```
+Your terminal should freeze and log you out of the GUI if you were logged in. Please give it some time,close the terminal and open a new one to log back in with new LAN-IP: 192.168.1.2.
+5. Setup the other two devices with the following configuration: 
+*
+STA2: 192.168.1.3
+STA3: 192.168.1.4
+*
+**However, in no way it is mandatory to have the exact same IP as mentioned above, I have only done so to maintain a certain pattern to make me remmber easily.**
+6. Now, connect all the devices with ethernet cable as shown in the figure and connect one of the routers with your host machine. In this way, you should have the access to all the connected device. Try to reach each of the device by pinging with their LAN-IP. If that works, you are good to go to the next steps. If that doesn't work, please check your connection and IP of the ethernet port of your host machine which can be anything in the same subnet, for example: 192.168.1.100.  
