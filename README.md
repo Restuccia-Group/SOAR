@@ -107,10 +107,12 @@ ifconfig br-lan 192.168.1.2
 Your terminal should freeze and log you out of the GUI if you were logged in. Please give it some time,close the terminal and open a new one to log back in with new LAN-IP: 192.168.1.2.
 5. Setup the other two devices with the following configuration: <br/>
 *
-STA2: 192.168.1.3
-STA3: 192.168.1.4
+STA2: 192.168.1.3 <br/>
+STA3: 192.168.1.4 <br/>
 *
 <br/>
+<br/>
 **However, in no way it is mandatory to have the exact same IP as mentioned above, I have only done so to maintain a certain pattern to make me remmber easily.**
+<br/>
 <br/>
 6. Now, connect all the devices with ethernet cable as shown in the figure and connect one of the routers with your host machine. In this way, you should have the access to all the connected device. Try to reach each of the device by pinging with their LAN-IP. If that works, you are good to go to the next steps. If that doesn't work, please check your connection and IP of the ethernet port of your host machine which can be anything in the same subnet, for example: 192.168.1.100.  
