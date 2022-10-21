@@ -161,3 +161,6 @@ It's time for trying out the MU-MIMO system that we have setup. SSH to the *AP* 
 ```
 The scripts that we executed earlier, set up the WLAN ip of the AP as 192.168.10.1 and STA1, STA2 and STA3 as 192.168.10.2, 192.168.10.3 and 192.168.10.4 respectively.
 ```
+Thus, from AP try pinging the other STAs over the air with WLAN IPs with ``` ping 192.168.10.x```. It should work. For somereasons, if it does not restart the routers and repeat "Setup AP and STAs."
+
+### Let's See if they Beamform !! 
