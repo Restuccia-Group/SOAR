@@ -45,7 +45,7 @@ tftp -i 192.168.1.1 put openwrt-22.03.2_r7800-squashfs.img
 
 
 ## 2. Installing Required Packages
-1. For installing packages, we have two choices, (i) download the required packages in "ipk" format in host PC, scp the file to the R7800, and install with opkg. \newline
+For installing packages, we have two choices, (i) download the required packages in "ipk" format in host PC, scp the file to the R7800, and install with opkg. \newline
 *As we can see from the image name that our OpenWrt vesion is 22.03.2, we should look for the ipk releases for the 22.03.2 version*
 
 For our case, all the necessary packages can be found [here](https://archive.openwrt.org/releases/22.03.2/packages/arm_cortex-a15_neon-vfpv4/packages/)
@@ -61,3 +61,28 @@ and install the package with
 opkg install  /tmp/xxx.ipk
 ```
 ##### Please install all the provided packages which would be necessary down the line.  
+
+**(ii)Second** option would be to facilitate the R7800 with internet access and install with ``` opkg install xxx ```
+
+For this, plug in the ethernet cable (with access to the global network) to the yellow port of the R7800 and try updating the OS with ``` opkg update``` (after ssh-ing to the R7800 itself). If that works fine, you are good to go. Install the packages with the following commmands: 
+
+```
+opkg install iperf3
+```
+```
+opkg install kmod-usb-storage &&
+opkg install kmod-usb-storage-uas &&
+opkg install usbutils &&
+opkg install block-mount &&
+opkg install gdisk &&
+opkg install e2fsprogs &&
+opkg install kmod-fs-ext4
+```
+**However,** if the ethernet doesn't allow us the internet access (it might happen due to the router firewall policy or configuration), we can either change the router configuration from GUI or we can connect the router to a wifi. I would suggest to go with the phone's hotspot as you can setup one step authentication (unlike many university / organization network) to allow the R7800 easy access. 
+
+I assume, your PC is still connected to the R7800 with an ethernet cable, thus access the GUI, by browsing ```192.168.1.1``` from a browser. login with username "admin" and keep the password field blank. Find the wireless tab in the luci (GUI) and scan for your hotspot. Now, you can install the required packages. 
+
+Now, let's setup the MU-MIMO
+
+## 3. Setup the MU-MIMO
+
