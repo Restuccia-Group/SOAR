@@ -117,3 +117,6 @@ STA3: 192.168.1.4 <br/>*
 <br/>
 <br/>
 6. Now, connect all the devices with ethernet cable as shown in the figure and connect one of the routers with your host machine. In this way, you should have the access to all the connected device. Try to reach each of the device by pinging with their LAN-IP. If that works, you are good to go to the next steps. If that doesn't work, please check your connection and IP of the ethernet port of your host machine which can be anything in the same subnet, for example: 192.168.1.100.  
+
+### Setup AP and STAs
+
