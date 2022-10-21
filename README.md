@@ -109,8 +109,8 @@ Your terminal should freeze and log you out of the GUI if you were logged in. Pl
 
 <br/>
 4. Setup the other two devices with the following configuration:
-<br/>
-*STA2: 192.168.1.3 <br/>
+
+*<br/>STA2: 192.168.1.3 <br/>
 STA3: 192.168.1.4 <br/>*
 
 <br/>
