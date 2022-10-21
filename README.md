@@ -120,3 +120,9 @@ STA3: 192.168.1.4 <br/>*
 
 ### Setup AP and STAs
 
+**Setup AP:** To set up the AP, we scp the ".conf"  file to the target device. please find required configure file: **"hostapd_ch_149_bw80.conf"** in MU-MIMO Configuration directory. 
+```
+scp hostapd_ch_149_bw80.conf root@192.168.1.1:/root/
+```
+
+
