@@ -86,5 +86,7 @@ Now, let's setup the MU-MIMO
 
 ## 3. Setup the MU-MIMO
 
-
+<img src="Images/Basic_MU-MIMO.jpg"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 
