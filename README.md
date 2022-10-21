@@ -135,6 +135,9 @@ Now you should be able to see, a network name **test5G** when you scan for avail
 
 On the host machine: 
 
+```
+scp -r AP root@192.168.1.x:/root/                 here, x=2/3/4
+```
 
 
 
