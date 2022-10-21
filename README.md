@@ -49,4 +49,15 @@ tftp -i 192.168.1.1 put openwrt-22.03.2_r7800-squashfs.img
 *As we can see from the image name that our OpenWrt vesion is 22.03.2, we should look for the ipk releases for the 22.03.2 version*
 
 For our case, all the necessary packages can be found [here](https://archive.openwrt.org/releases/22.03.2/packages/arm_cortex-a15_neon-vfpv4/packages/)
-  
+
+2. All the necessary ipk files are also available in "Device_Configuration" folder. At first, download and scp the files to the router with 
+
+```
+scp xxx.ipk root@192.168.1.1:/tmp/
+```
+and install the package with 
+
+```
+opkg install  /tmp/xxx.ipk
+```
+##### Please install all the provided packages which would be necessary down the line.  
