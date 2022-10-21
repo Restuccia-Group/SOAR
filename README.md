@@ -90,3 +90,6 @@ Now, let's setup the MU-MIMO
      alt="Markdown Monster icon" width="800" height="500"
      style="float: center;" />
 
+For setting up a MU-MIMO system with IEEE802.11ac, at first we need to setup a network with proper configuration. For this, the required configuration files are provided in "MU-MIMO_Configuration" folder. 
+
+1. At first, 
