@@ -164,3 +164,5 @@ The scripts that we executed earlier, set up the WLAN ip of the AP as 192.168.10
 Thus, from AP try pinging the other STAs over the air with WLAN IPs with ``` ping 192.168.10.x```. It should work. For somereasons, if it does not restart the routers and repeat "Setup AP and STAs."
 
 ### Let's See if they Beamform !! 
+
+
