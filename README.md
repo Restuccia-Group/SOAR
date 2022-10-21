@@ -129,4 +129,13 @@ scp -r AP root@192.168.1.1:/root/
 
 On R7800, run : ``` Run_AP_C_1_N_1.sh ``` or ``` Run_AP_C_2_N_2.sh ``` or ``` Run_AP_C_3_N_3.sh ``` depending on the configuration that you want to do. They are respectively for 1-antenna-1-stream, 2-antenna-2-stream, 3-antenna-3-stream.
 
+Now you should be able to see, a network name **test5G** when you scan for available wifi network on any device. 
+
+**Setup STAs:** Now, let's set up STAs.
+
+On the host machine: 
+
+
+
+
 
