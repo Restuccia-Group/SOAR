@@ -7,9 +7,10 @@ For the  drone offloading task, we consider IEEE 802.11ac / 11 ax Multi User Mul
 We devide this whole system into several sections as follows: 
 
 ##### **1. Device Configurations**
-##### **2. Setup the MU-MIMO**
-##### **3. Accessing and Configuring the Network Remotely**
-##### **4. Data Offloading** 
+##### **2. Installing Required Packages**
+##### **3. Setup the MU-MIMO**
+##### **4. Accessing and Configuring the Network Remotely**
+##### **5. Data Offloading** 
 
 ## 1. Device Confifurations 
 
@@ -38,3 +39,14 @@ For our case, it would be:
 ``` 
 tftp -i 192.168.1.1 put openwrt-22.03.2_r7800-squashfs.img
 ```
+4. The power led will stop flashing if succeeded in transferring the image, and the router reboots rather quickly with the new firmware.
+5. After it boots, it should have the default IP of OpenWrt which is "192.168.1.1". Try to ping "192.168.1.1" from the host PC. 
+6. If the pinging works fine, go ahead with  ``` ssh root@192.168.1.1``` and we should be logged in as by default, no password is set.   
+
+
+## 2. Installing Required Packages
+1. For installing packages, we have two choices, (i) download the required packages in "ipk" format in host PC, scp the file to the R7800, and install with opkg. \newline
+*As we can see from the image name that our OpenWrt vesion is 22.03.2, we should look for the ipk releases for the 22.03.2 version*
+
+For our case, all the necessary packages can be found here [https://archive.openwrt.org/releases/22.03.2/packages/arm_cortex-a15_neon-vfpv4/packages/]
+  
