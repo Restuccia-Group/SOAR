@@ -246,5 +246,5 @@ uci set fstab.@mount[-1].enabled='1'
 uci commit fstab
 ```
 
-Now reboot the system, you should see the external drive in ```/mnt/sdX``` directory. 
+Now reboot the system, you should be able to find the external drive in ```/mnt/sdX``` directory. 
 
