@@ -165,4 +165,27 @@ Thus, from AP try pinging the other STAs over the air with WLAN IPs with ``` pin
 
 ### Let's See if they Beamform !! 
 
+1. The host machine should have the NIC which can sniff in the monitor mode. We have tested *NGW8265* and *AX200*.
+2. Install airmon-ng tool with 
+```
+sudo apt-get install -y aircrack-ng
+```
+3. For sniffing install Wireshark with
+```
+sudo apt install wireshark
+```
+4. Now go into the monitor mode with 
+```
+sudo airmon-ng start wlp6s0
 
+```
+where wlp6so is your wireless interface which youy can check with *ifconfig*
+5. Now select the right channel and bandwith before start the sniffing, 
+```
+sudo iw dev wlp6s0mon set channel 157 80MHz
+```
+I am sniffing in channel 157 with 80MHz bandwidth as my target network is operating in the same channel and bandwidth. 
+
+6. Start the Wireshark with ```sudo wireshark```. and start the capture from the capture tab. From capture tab go to options and select wlp6smon (in your case the interface most likely has a different name) and also check the monitor option.
+7. Now as you are sniffing in the same channel as your network, you shoud be able to find the NDP and beamforming feedback by searching the keywords "NDP" and "feedback" (select regular expression in the search type).
+8. If you are getting some packets with NDP and Feedback, you are surely beamforming. if not, try with lower number of antenna and spatial stream of the STAs and taking the STAs further away from each other. My suggestion is to start with 2 STAs each with 1 antenna and 1 spatial stream. whereas the AP must haave atleast 2 antennas and 2 spatial stream and keep the devices 5-10 meter away from each other.  
