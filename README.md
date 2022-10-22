@@ -170,12 +170,7 @@ iperf3 -c 192.168.10.x -u -b 10G -t 300 -P 30
 ```
 here 192.168.10.x is the STA IP. For three different STAs, start the *iperf* client like above command in three different terminal window of AP. 
 
-### Remmember to select the the WLAN IP 
-
-<span style="color:green;font-weight:700;font-size:20px">
-    markdown color font styles
-</span>
-
+### **************************************************Remmember to select the the WLAN IP**************************************************************** 
 
 
 ### Let's See if they Beamform !! 
