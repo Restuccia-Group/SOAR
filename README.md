@@ -210,4 +210,6 @@ To address this, we create a separate wireless network with jetson nanos and con
 
 For this we equiped the jetson with NICs (AX200) and antennas. and connect them as shown in the figure: 
 
-
+<img src="Images/Basic_MU-MIMO_Jetson.jpg"
+     alt="Markdown Monster icon" width="700" height="500"
+     style="float: center;" />
