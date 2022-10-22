@@ -199,3 +199,7 @@ I am sniffing in channel 157 with 80MHz bandwidth as my target network is operat
 6. Start the Wireshark with ```sudo wireshark```. and start the capture from the capture tab. From capture tab go to options and select wlp6smon (in your case the interface most likely has a different name) and also check the monitor option.
 7. Now as you are sniffing in the same channel as your network, you shoud be able to find the NDP and beamforming feedback by searching the keywords "NDP" and "feedback" (select regular expression in the search type).
 8. If you are getting some packets with NDP and Feedback, you are surely beamforming. if not, try with lower number of antenna and spatial stream of the STAs and taking the STAs further away from each other. My suggestion is to start with 2 STAs each with 1 antenna and 1 spatial stream. whereas the AP must haave atleast 2 antennas and 2 spatial stream and keep the devices 5-10 meter away from each other.  
+
+
+
+## 4. Accessing and Configuring the Network Remotely
