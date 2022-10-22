@@ -213,3 +213,18 @@ For this we equiped the jetson with NICs (AX200) and antennas. and connect them 
 <img src="Images/Basic_MU-MIMO_Jetson.jpg"
      alt="Markdown Monster icon" width="700" height="500"
      style="float: center;" />
+     
+     
+## 5. Data Offloading
+
+For data offloading from drone to the ground STA, we need to equip the devices -the routers (both AO and STAs) with external storage. Otherwise the memmory overflow in the NVRAM might cause the crashing the OS or at least the configs. 
+
+Thus we plug in external storage to the R7800 which fortunately support the external USB storages. 
+
+Let's format the external drives in ext4 format before plugging them in. Once plugges in, please check if the OS can find the USB: 
+
+```
+ls -l /dev/sd*
+```
+You should see something like this: 
+
