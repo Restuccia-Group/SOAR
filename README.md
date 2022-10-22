@@ -229,5 +229,5 @@ ls -l /dev/sd*
 You should see something like this: 
 
 <img src="Images/SS_1.png"
-     alt="Markdown Monster icon" width="700" height="200"
+     alt="Markdown Monster icon" width="700" height="100"
      style="float: center;" />
