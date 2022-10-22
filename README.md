@@ -231,3 +231,20 @@ You should see something like this:
 <img src="Images/SS_1.png"
      alt="Markdown Monster icon" width="700" height="80"
      style="float: center;" />
+
+Let's create the file system: 
+```
+mkfs.ext4 /dev/sda1
+```
+Now, generate the config entry for the fstab file
+```
+block detect | uci import fstab
+```
+It's better to enable the auto-mount: 
+```
+uci set fstab.@mount[-1].enabled='1' 
+uci commit fstab
+```
+
+Now reboot the system, you should see the external drive in ```/mnt/sdX``` directory. 
+
