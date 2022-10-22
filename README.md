@@ -163,6 +163,14 @@ The scripts that we executed earlier, set up the WLAN ip of the AP as 192.168.10
 ```
 Thus, from AP try pinging the other STAs over the air with WLAN IPs with ``` ping 192.168.10.x```. It should work. For somereasons, if it does not restart the routers and repeat "Setup AP and STAs."
 
+Start *iperf3* server in all the STAs with executing ```iperf3 -s``` in the STAs.
+From the AP, start sensing the iperf3 packets to each of the STAs with multiple streams with 
+```
+iperf3 -c 192.168.10.x -u -b 10G -t 300 -P 30
+```
+here 192.168.10.x is the STA IP. For three different STAs, start the *iperf* client like above command in three different terminal window of AP. 
+
+
 ### Let's See if they Beamform !! 
 
 1. The host machine should have the NIC which can sniff in the monitor mode. We have tested *NGW8265* and *AX200*.
