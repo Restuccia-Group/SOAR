@@ -203,3 +203,11 @@ I am sniffing in channel 157 with 80MHz bandwidth as my target network is operat
 
 
 ## 4. Accessing and Configuring the Network Remotely
+
+Now, in case of Drone Offloading, the AP will on top of the Drone and the STAs will be at the ground primarily. However, in this case, we can not have the wires access to each of the devices (AP and STAs) as the AP will be on the fly and the STAs will be scattered in an open field or Drone testbed.
+
+To address this, we create a separate wireless network with jetson nanos and connect them with the devices (AP and STAs) with ethernet. In that way, being in the second wireless network, the host machine ssh to the jetson and then from inside the jetson, ssh to the devices (AP and STAs) to change the configutration on the fly. It it mentionable that, the AP of the second wireless network can be at the center of the drone testbed giving us the omnidirectional coverage. 
+
+For this we equiped the jetson with NICs (AX200) and antennas. and connect them as shown in the figure: 
+
+
