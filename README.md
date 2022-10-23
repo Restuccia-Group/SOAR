@@ -193,7 +193,8 @@ sudo apt install wireshark
 sudo airmon-ng start wlp6s0
 
 ```
-where wlp6so is your wireless interface which youy can check with *ifconfig*
+where wlp6s0 is your wireless interface which youy can check with *ifconfig*
+
 5. Now select the right channel and bandwith before start the sniffing, 
 ```
 sudo iw dev wlp6s0mon set channel 157 80MHz
