@@ -40,7 +40,7 @@ For our case, it would be:
 tftp -i 192.168.1.1 put openwrt-22.03.2_r7800-squashfs.img
 ```
 <br/>
-4. The power led will stop flashing if succeeded in transferring the image, and the router reboots rather quickly with the new firmware.
+4. The power led will stop flashing if succeeded in transferring the image, and the router reboots rather quickly with the new firmware. <br\>
 5. After it boots, it should have the default IP of OpenWrt which is "192.168.1.1". Try to ping "192.168.1.1" from the host PC. 
 6. If the pinging works fine, go ahead with  ``` ssh root@192.168.1.1``` and we should be logged in as by default, no password is set.   
 
