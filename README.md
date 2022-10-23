@@ -154,7 +154,7 @@ In our case the interface is wlan0,
 ```
 wpa_supplicant -B -iwlan0 -Dnl80211 -c wpa_supplicant.conf
 ```
-It will online work if you have "systemd-networkd" daemon enabled which is in there in OpenWrt by default. However, other OS like Ubuntu 20.04 might not have "systemd-networkd" enabled or installed by default as it manages the network with "NetworkManager service". In those cases, you can connect your device with GUI or *nmcli* tool. 
+It will only work if you have "systemd-networkd" daemon enabled which is in there in OpenWrt by default. However, other OS like Ubuntu 20.04 might not have "systemd-networkd" enabled or installed by default as it manages the network with "NetworkManager service". In those cases, you can connect your device with GUI or *nmcli* tool. 
 
 This can be generalized to any device/ OS and the Network Interface Card (NIC) which allows you to change the number of antennas and spatial streams. We have tested NGW8265, AX200 and AX2100. (We will keep updating the list).
 
