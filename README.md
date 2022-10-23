@@ -69,7 +69,7 @@ opkg install  /tmp/xxx.ipk
 
 **(ii)Second** option would be to facilitate the R7800 with internet access and install with ``` opkg install xxx ```
 
-For this, plug in the ethernet cable (with access to the global network) to the yellow port of the R7800 and try updating the OS with ``` opkg update``` (after ssh-ing to the R7800 itself). If that works fine, you are good to go. Install the packages with the following commmands: 
+For this, plug in the ethernet cable (with access to the global network) to the yellow port of the R7800 and try updating the packages with ``` opkg update``` (after ssh-ing to the R7800 itself). If that works fine, you are good to go. Install the packages with the following commmands: 
 
 ```
 opkg install iperf3
