@@ -37,7 +37,11 @@ tftp -i [router IP] put [firmware filename].[file format]
 ```
 For our case, it would be: 
 ``` 
-tftp -i 192.168.1.1 put openwrt-22.03.2_r7800-squashfs.img
+tftp
+connect 192.168.1.1
+mode binary
+put openwrt-22.03.2_r7800-squashfs.img
+quit
 ```
 <br/>
 
@@ -72,9 +76,8 @@ opkg install  /tmp/xxx.ipk
 For this, plug in the ethernet cable (with access to the global network) to the yellow port of the R7800 and try updating the packages with ``` opkg update``` (after ssh-ing to the R7800 itself). If that works fine, you are good to go. Install the packages with the following commmands: 
 
 ```
-opkg install iperf3
-```
-```
+opkg update &&
+opkg install iperf3 &&
 opkg install kmod-usb-storage &&
 opkg install kmod-usb-storage-uas &&
 opkg install usbutils &&
