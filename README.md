@@ -31,11 +31,9 @@ Default Gateway: 192.168.1.1 <br />*
 
 1. Turn off the power, push and hold the reset button (in a hole on backside) with a pin
 2. While still holding the reset button, turn on the power, and the power led starts flashing white (after it first flashes orange for a while)
-3. Release the reset button after the power led flashes white (for at least 10 times), immediately execute the tftp command on your computer. 
-```
-tftp -i [router IP] put [firmware filename].[file format]
-```
-For our case, it would be: 
+3. Release the reset button after the power led flashes white (for at least 10 times), immediately execute the tftp command on your computer:
+4. 
+
 ``` 
 tftp
 connect 192.168.1.1
