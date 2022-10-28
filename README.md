@@ -159,7 +159,7 @@ It will only work if you have "systemd-networkd" daemon enabled which is in ther
 
 This can be generalized to any device/ OS and the Network Interface Card (NIC) which allows you to change the number of antennas and spatial streams. We have tested NGW8265, AX200 and AX2100. (We will keep updating the list).
 
-Now, run ```./start_client_N_1_C_1.sh``` or ```start_client_N_1_C_1.sh``` or ```start_client_N_1_C_1.sh``` respectively for 1-antenna-1-stream, 2-antenna-2-stream and 3-antenna-3-stream respectively. 
+Now, run ```./start_client_N_1_C_1.sh``` or ```start_client_N_2_C_2.sh``` or ```start_client_N_3_C_3.sh``` respectively for 1-antenna-1-stream, 2-antenna-2-stream and 3-antenna-3-stream respectively. 
 
 **NOW**
 It's time for trying out the MU-MIMO system that we have setup. SSH to the *AP* with ``` ssh root@192.168.1.1 ```.
