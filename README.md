@@ -223,7 +223,7 @@ For this we equiped the jetson with NICs (AX200) and antennas. and connect them 
      
 ## 5. Data Offloading
 
-For data offloading from drone to the ground STA, we need to equip the devices -the routers (both AO and STAs) with external storage. Otherwise the memmory overflow in the NVRAM might cause the crashing the OS or at least the configs. 
+For data offloading from drone to the ground STA, we need to equip the devices -the routers (both AO and STAs) with external storage. **Dont save the files in root directory** which will worn out the flash storage ultimately causing to fail the device or the data will be lost if it is more than the flash storage.
 
 Thus we plug in external storage to the R7800 which fortunately support the external USB storages. 
 
