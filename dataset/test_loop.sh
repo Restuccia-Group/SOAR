@@ -1,14 +1,24 @@
-INTERVAL="0.01"
+while getopts d:a:p:n:i: flag
+do
+    case "${flag}" in
+        d) search_dir=${OPTARG};;
+        a) add=${OPTARG};;
+        p) port=${OPTARG};;
+        n) name=${OPTARG};;
+        i) interval=${OPTARG};;
+    esac
+done
 
-search_dir=/mnt/sda1/bin-sampled-dataset
+echo "search_dir: $search_dir"
+echo "address: $add"
+echo "port: $port"
+echo "name: $name"
+echo "interval: $interval"
+
 for entry in "$search_dir"/*
 do
-  h=$(date +%H)
-  m=$(date +%M)
-  s=$(date +%S)
-  ms=$(date +%3N)
-  now_ms=$((10#$h*3600000 + 10#$m*60000 + 10#$s*1000 + 10#$ms))
-  cat $entry | nc -vu 192.168.10.2 9000;
-  echo "$entry,$now_ms," >> output.txt;
-  sleep $INTERVAL
+  now_ms=$(date +%Y/%M/%d-%T.%N)
+  cat $entry | nc -uvc $add $port;
+  echo "$entry,$now_ms" >> $name;
+  sleep $interval
 done
