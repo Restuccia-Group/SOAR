@@ -18,7 +18,7 @@ echo "interval: $interval"
 for entry in "$search_dir"/*
 do
   now_ms=$(date +%Y/%M/%d-%T.%N)
-  cat $entry | nc -uvc $add $port;
+  cat $entry | netcat -uvc $add $port;
   echo "$entry,$now_ms" >> $name;
   sleep $interval
 done
