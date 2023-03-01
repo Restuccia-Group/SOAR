@@ -18,7 +18,7 @@ scp test_loop.sh root@192.168.1.1:/mnt/sda1
 
 We use ``ncat`` to send the files from the dataset through UDP. We initate the server side indicating the transport procool (UDP in our case), we also enable ``ncat`` verbose to be able to store the received data and we set zero waiting time to receive streams without extra delays. We suggest to perform the following command in the USB driver location to dump the received info to the USB and not in the router's memory. 
 ```
-root@OpenWrt:/mnt/sda1# nc -luvz -p 9000 > 001-bin-images.bin
+root@OpenWrt:/mnt/sda1# netcat -luvz -p 9000 > 001-bin-images.bin
 ```
 Please change the name of the output binary file everytime there is a new experiment. Also, this command runs on the STAtions, because they received the images from the AP.
 
