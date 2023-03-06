@@ -1,16 +1,16 @@
-MU-MIMO Drone Offloading Experiment Configuration:
+# MU-MIMO Drone Offloading Experiment Configuration:
 
 
 ## The metrics that we are going to measure: 
-		(i) Latency					(Netcat)	
-		(ii) Packet loss and 		(Netcat)
+		(i) Latency				(Netcat)	
+		(ii) Packet loss and 			(Netcat)
 		(iii) Throughput 			(iperf3)
 
 
 
 
 
-Different Configurations to collect the data: 
+## Different Configurations to collect the data: 
 
 (i) One AP One STA (The stations will always have one antenna and one spatial stream enabled)
 
@@ -31,7 +31,7 @@ Different Configurations to collect the data:
 				(***) BW: 20 MHz, 40 MHz, 80 MHz
 
 
-#### Repeat the test (i) with following configurations: 
+## Repeat the test (i) with following configurations: 
 
 			** 	  One AP, two STA
 			** 	  One AP, three STA
