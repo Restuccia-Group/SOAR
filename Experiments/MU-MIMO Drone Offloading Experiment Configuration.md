@@ -12,7 +12,7 @@
 
 ## Different Configurations to collect the data: 
 
-(i) One AP One STA (The stations will always have one antenna and one spatial stream enabled)
+### (i) One AP One STA (The stations will always have one antenna and one spatial stream enabled)
 
 		1. AP: One antenna One Spatial Stream 
 				
