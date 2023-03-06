@@ -33,8 +33,8 @@
 
 ## Repeat the test (i) with following configurations: 
 
-			** 	  One AP, two STA
-			** 	  One AP, three STA
-			***	  One AP, Four STA
-			****  One AP, Five STA	
+			** 	One AP, two STA
+			** 	One AP, three STA
+			***	One AP, Four STA
+			****  	One AP, Five STA	
 
