@@ -22,7 +22,7 @@ root@OpenWrt:/mnt/sda1# netcat -luvz -p 9000 > 001-bin-images.bin
 ```
 Please change the name of the output binary file everytime there is a new experiment. Also, this command runs on the STAtions, because they received the images from the AP.
 
-To monitor the received data, we use ``tcpdump`` at the server side of ``ncat``. We open another terminal at the STAtion to store the packets information coming from the specific interface. We have been using the ``wlan0`` interface, but this could change depending on the configuration performed. We use the following command to store the ```pcap`` file generated from ``tcp dump```.
+To monitor the received data, we use ``tcpdump`` at the server side of ``ncat``. We open another terminal at the STAtion to store the packets information coming from the specific interface. We have been using the ``wlan0`` interface, but this could change depending on the configuration performed. We use the following command to store the ```pcap`` file generated from ``tcp dump```. This step will be repeated in both devices (STAs and AP)
 
 ```
 root@OpenWrt:/mnt/sda1# tcpdump -n -i wlan0 -s 65535 -w 001-sta-1-packets_bin.pcap
