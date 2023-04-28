@@ -19,7 +19,7 @@ for entry in "$search_dir"/*
 do
   sleep $interval
   echo "$entry,$(date +%Y/%M/%d-%T.%N)" >> $name;
-  cat $entry | nc -uc $add $port;
+  cat $entry | netcat -uc $add $port;
   echo "$entry,$(date +%Y/%M/%d-%T.%N)" >> $name;
-  echo "NEW_STREAM" | nc -uc $add $port;
+  echo "NEW_STREAM" | netcat -uc $add $port;
 done
