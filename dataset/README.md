@@ -31,7 +31,7 @@ Since we are storing data, please execute the command above on the USB driver lo
 
 On the client side of the ``ncat`` command we will use the ``test_loop.sh``. This file receives as arguments ``-d`` (directory where the binary images are located), ``-a`` (the local area address of the station where the data will be sent), ``-p`` (port that will be used), ``-n`` (the name and extension of the output file),``-i``(the inteval in seconds of the sending data rate). The output file stores the name of each image sent as well as the timestamp of when each binary image is sent. An execution example of the command where we use the ``bin-sampled-dataset`` to send images to ``192.168.10.2`` through the port ``9000`` every ``1`` second and we store the seding time stamps in a file called ``001-send-timestamps.txt``:
 ```
-root@OpenWrt:/mnt/sda1# ./test_loop.sh -d "/mnt/sda1/bin-sampled-dataset" -a "192.168.10.2" -p 9000 -n 001-send-timestamps.txt -i 1
+root@OpenWrt:/mnt/sda1# ./test_loop.sh -d "/mnt/sda1/bin-sampled-dataset" -a "192.168.10.2" -p 9000 -n 001-send-timestamps.txt -i 0
 ```
 Tip: Sometimes the test_loop requires bash execution permissions. In that case, please use: ``chmod +x test_loop.sh``
 
