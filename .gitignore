@@ -1,4 +1,6 @@
 *.pcapng
 *.npy
 *.mat
+*.pcap
+
 
