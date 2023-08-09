@@ -3,5 +3,10 @@
 *.mat
 *.pcap
 *.bin
-Corruption_Test
+corruption_test/datasets
+corruption_test/loss_datasets
+corruption_test/yolov8
+corruption_test/yolov5
+
+
 
