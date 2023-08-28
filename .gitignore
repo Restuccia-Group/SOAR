@@ -4,6 +4,7 @@
 *.pcap
 *.bin
 *.h5
+*.pt
 corruption_test/object_detection_segmentation/datasets
 corruption_test/object_detection_segmentation/loss_datasets
 corruption_test/object_detection_segmentation/yolov8
