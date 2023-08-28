@@ -3,10 +3,10 @@
 *.mat
 *.pcap
 *.bin
-corruption_test/datasets
-corruption_test/loss_datasets
-corruption_test/yolov8
-corruption_test/yolov5
+corruption_test/object_detection_segmentation/datasets
+corruption_test/object_detection_segmentation/loss_datasets
+corruption_test/object_detection_segmentation/yolov8
+corruption_test/object_detection_segmentation/yolov5
 
 
 
