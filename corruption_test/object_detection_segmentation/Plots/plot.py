@@ -12,10 +12,10 @@ mpl.rcParams['font.size'] = 22
 
 
 # Change Params Here:
-file_string = 'object_detection_map50'
+file_string = 'instance_segmentation_map50'
 rows_as_group = ['0', '10', '20', '30', '40', '50', '60', '70', '80', '90']
 columns_as_bars = ["YOLOv3", "YOLOv8"]
-ytick_label = ['0.0', '0.2', '0.4', '0.6', '0.7']
+#ytick_label = ['0.0', '0.2', '0.4', '0.6', '0.7']
 
 
 data_file =  file_string + '.txt'
@@ -44,19 +44,19 @@ rects2 = ax.bar(x, column_2, width, color='lightcyan', hatch=' \ ', edgecolor="b
 ax.set_ylabel('mAP$@$0.5', fontsize=35)
 ax.set_xlabel("Percent packet loss in each image", fontsize=35)
 #ax.set_title('Scores by group and gender', fontsize= 25)
-
+ax.set_yticks([0.0,  0.2, 0.4, 0.6, 0.8], [0.0,  0.2, 0.4, 0.6, 0.8], fontsize=35)
 
 ax.set_xticks(x)
-ax.set_xticklabels(rows_as_group, fontsize=30)
+ax.set_xticklabels(rows_as_group, fontsize=35)
 
 
 ax.set_ylim(0.0, 0.9)
-ax.set_yticklabels(ytick_label, fontsize=30)
+#ax.set_yticklabels(ytick_label, fontsize=30)
 
 
 ax.legend([rects1, rects2], columns_as_bars, loc='upper center', ncol=2, fontsize=30)
 plt.grid(axis='y', linestyle='--', linewidth=0.5)
-plt.title('mAP$@$0.5 performance of object detection', fontsize=35)
+plt.title('mAP$@$0.5 performance of instance segmentation', fontsize=35)
 
 plt.tight_layout()
 
