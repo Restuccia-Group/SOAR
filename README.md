@@ -1,4 +1,4 @@
-# MU-MIMO-Drone-Offloading
+# SOAR: Semantic Multi-User MIMO Communications for Reliable Wireless Edge Computing 
 
 In this project, we investigate the various challenges of Data offloading from drone to the ground stations exploiting the downlink beamforming with multiple receive & sending antenna as well as streams. We intend to address the challenges with State-Of-The-Art Deep Learning techniques by defining the required offloading stratagies. 
 
