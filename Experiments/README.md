@@ -69,8 +69,7 @@ Default Gateway: 192.168.1.1 <br />*
 1. Turn off the power, push and hold the reset button (in a hole on backside) with a pin
 2. While still holding the reset button, turn on the power, and the power led starts flashing white (after it first flashes orange for a while)
 3. Release the reset button after the power led flashes white (for at least 10 times), immediately execute the tftp command on your computer:
-4. 
-
+   
 ``` 
 tftp
 connect 192.168.1.1
@@ -84,7 +83,8 @@ quit
 
 5. After it boots, it should have the default IP of OpenWrt which is "192.168.1.1". Try to ping "192.168.1.1" from the host PC. 
 
-6. If the pinging works fine, go ahead with  ``` ssh root@192.168.1.1``` and we should be logged in as by default, no password is set.   
+6. If the pinging works fine, go ahead with  ``` ssh root@192.168.1.1``` and we should be logged in as by default, no password is set.
+   
 ································································································································································································
 
 ### 2. Installing Required Packages
@@ -126,11 +126,12 @@ opkg install kmod-fs-ext4
 I assume, your PC is still connected to the R7800 with an ethernet cable, thus access the GUI, by browsing ```192.168.1.1``` from a browser. login with username "admin" and keep the password field blank. Find the wireless tab in the luci (GUI) and scan for your hotspot. Now, you can install the required packages. 
 
 Now, let's setup the MU-MIMO
+
 ································································································································································································
 
 ### 3. Setup the MU-MIMO
 
-<img src="Images/Basic_MU-MIMO.jpg"
+<img src="../Images/Basic_MU-MIMO.jpg"
      alt="Markdown Monster icon" width="700" height="500"
      style="float: center;" />
 
