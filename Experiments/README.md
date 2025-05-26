@@ -1,7 +1,6 @@
 # MU-MIMO Rover Offloading Experiments
 
-## Experiments Configuration: 
----
+## A. Experiments Configuration: 
 
 ## The metrics that we are going to measure: 
 		(i) Latency				(Netcat)	
@@ -37,7 +36,7 @@
 			***	One AP, Four STA
 			****  	One AP, Five STA	
 
-## Equipment Setup:
+## B. Equipment Setup:
 ---
 In these experiments, we investigate the various challenges of Data offloading from rover to the ground stations exploiting the downlink beamforming with multiple receive & sending antenna as well as streams. 
 
