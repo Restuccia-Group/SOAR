@@ -1,13 +1,12 @@
-# MU-MIMO Rover Offloading Experiment Configuration:
+# MU-MIMO Rover Offloading Experiments
 
+## Experiments Configuration: 
+---
 
 ## The metrics that we are going to measure: 
 		(i) Latency				(Netcat)	
 		(ii) Packet loss and 			(Netcat)
 		(iii) Throughput 			(iperf3)
-
-
-
 
 
 ## Different Configurations to collect the data: 
@@ -38,6 +37,8 @@
 			***	One AP, Four STA
 			****  	One AP, Five STA	
 
+## Equipment Setup:
+---
 In these experiments, we investigate the various challenges of Data offloading from rover to the ground stations exploiting the downlink beamforming with multiple receive & sending antenna as well as streams. 
 
 For the  rover offloading task, we consider IEEE 802.11ac / 11 ax Multi User Multiple Input Multiple Output (MU-MIMO) system where Rovers will be offloading various tasks like image detection, classification or segmentation to the  ground stations. Thus, the Rover is considered as the Access Point (AP) whereas the ground nodes are the Stations (STA) of the MU-MIMO system. 
