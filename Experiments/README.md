@@ -50,6 +50,8 @@ We devide this whole system into several sections as follows:
 ##### **4. Accessing and Configuring the Network Remotely**
 ##### **5. Data Offloading** 
 
+***
+
 ### 1. Device Configurations 
 
 For the flexibility of the different configurations of MU-MIMO we use Netgear Nighthawk R7800 router as both AP and STAs which supports IEEE 802.11ac. Our first step would be to flash the routers with OpenWrt which allows us to exploit tools like iw, ifconfig, hostapd etc. We will go with the TFTP flashing which is more easier and convenient than that of the other exixting flashing processes. Please find the openwrt-22.03.2 image (which we will flash) for the R7800 in Device_Configuration folder.
