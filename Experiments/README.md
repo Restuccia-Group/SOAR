@@ -2,15 +2,15 @@
 
 ## A. Experiments Configuration: 
 
-## The metrics that we are going to measure: 
+### The metrics that we are going to measure: 
 		(i) Latency				(Netcat)	
 		(ii) Packet loss and 			(Netcat)
 		(iii) Throughput 			(iperf3)
 
 
-## Different Configurations to collect the data: 
+### Different Configurations to collect the data: 
 
-### (i) One AP One STA (The stations will always have one antenna and one spatial stream enabled)
+#### (i) One AP One STA (The stations will always have one antenna and one spatial stream enabled)
 
 		1. AP: One antenna One Spatial Stream 
 				
@@ -29,7 +29,7 @@
 				(***) BW: 20 MHz, 40 MHz, 80 MHz
 
 
-## Repeat the test (i) with following configurations: 
+### Repeat the test (i) with following configurations: 
 
 			** 	One AP, two STA
 			** 	One AP, three STA
@@ -37,7 +37,7 @@
 			****  	One AP, Five STA	
 
 ## B. Equipment Setup:
----
+
 In these experiments, we investigate the various challenges of Data offloading from rover to the ground stations exploiting the downlink beamforming with multiple receive & sending antenna as well as streams. 
 
 For the  rover offloading task, we consider IEEE 802.11ac / 11 ax Multi User Multiple Input Multiple Output (MU-MIMO) system where Rovers will be offloading various tasks like image detection, classification or segmentation to the  ground stations. Thus, the Rover is considered as the Access Point (AP) whereas the ground nodes are the Stations (STA) of the MU-MIMO system. 
@@ -50,11 +50,11 @@ We devide this whole system into several sections as follows:
 ##### **4. Accessing and Configuring the Network Remotely**
 ##### **5. Data Offloading** 
 
-## 1. Device Configurations 
+### 1. Device Configurations 
 
 For the flexibility of the different configurations of MU-MIMO we use Netgear Nighthawk R7800 router as both AP and STAs which supports IEEE 802.11ac. Our first step would be to flash the routers with OpenWrt which allows us to exploit tools like iw, ifconfig, hostapd etc. We will go with the TFTP flashing which is more easier and convenient than that of the other exixting flashing processes. Please find the openwrt-22.03.2 image (which we will flash) for the R7800 in Device_Configuration folder.
 
-### Prerequisites for TFTP flashing
+#### Prerequisites for TFTP flashing
 
 1. A TFTP client for our computer. In Ubuntu, install it with 
 ```
@@ -65,7 +65,7 @@ sudo apt install tftp
 Subnet mask: 255.255.255.0  <br />
 Default Gateway: 192.168.1.1 <br />*
 
-### Flash with OpenWrt
+#### Flash with OpenWrt
 
 1. Turn off the power, push and hold the reset button (in a hole on backside) with a pin
 2. While still holding the reset button, turn on the power, and the power led starts flashing white (after it first flashes orange for a while)
@@ -88,7 +88,7 @@ quit
 6. If the pinging works fine, go ahead with  ``` ssh root@192.168.1.1``` and we should be logged in as by default, no password is set.   
 
 
-## 2. Installing Required Packages
+### 2. Installing Required Packages
 For installing packages, we have two choices, (i) download the required packages in "ipk" format in host PC, scp the file to the R7800, and install with opkg. 
 
 *As we can see from the image name that our OpenWrt vesion is 22.03.2, we should look for the ipk releases for the 22.03.2 version*
@@ -128,7 +128,7 @@ I assume, your PC is still connected to the R7800 with an ethernet cable, thus a
 
 Now, let's setup the MU-MIMO
 
-## 3. Setup the MU-MIMO
+### 3. Setup the MU-MIMO
 
 <img src="Images/Basic_MU-MIMO.jpg"
      alt="Markdown Monster icon" width="700" height="500"
@@ -136,7 +136,7 @@ Now, let's setup the MU-MIMO
 
 For setting up a MU-MIMO system with IEEE802.11ac, at first we need to setup a network with proper configuration. For this, the required configuration files are provided in "MU-MIMO_Configuration" folder. 
 
-### Configure IP and Connection
+#### Configure IP and Connection
 
 1. I assume that, you followed the earlier steps to setup the devices. In that case, all the routers should have the same LAN-IP: 192.168.1.1. I also assume you have at least total of 3 device to setup the multi-user network. I have four devices, so I will setup one of the device as AP and other as STAs. 
 2. Now we connect each of the device one by one to our host machine with an ethernet cable as described earlier and change the LAN-IP of them except for one device, for which we will keep the LAN-IP as 192.168.1.1 and setup as the AP.   
@@ -161,7 +161,7 @@ STA3: 192.168.1.4 <br/>*
 <br/>
 6. Now, connect all the devices with ethernet cable as shown in the figure and connect one of the routers with your host machine. In this way, you should have the access to all the connected device. Try to reach each of the device by pinging with their LAN-IP. If that works, you are good to go to the next steps. If that doesn't work, please check your connection and IP of the ethernet port of your host machine which can be anything in the same subnet, for example: 192.168.1.100.  
 
-### Setup AP and STAs
+#### Setup AP and STAs
 
 **Setup AP:** To set up the AP, we scp the "MU-MIMO_Configuration/AP" directory to the target device:
 
@@ -213,10 +213,10 @@ iperf3 -c 192.168.10.x -u -b 10G -t 300 -P 30
 ```
 here 192.168.10.x is the STA IP. For three different STAs, start the *iperf* client like above command in three different terminal window of AP. 
 
-### ******************************Remmember to select the the WLAN IP*****************************
+#### ******************************Remember to select the the WLAN IP*****************************
 
 
-### Let's See if they Beamform !! 
+#### Let's See if they Beamform !! 
 
 1. The host machine should have the NIC which can sniff in the monitor mode. We have tested *NGW8265* and *AX200*.
 2. Install airmon-ng tool with 
@@ -244,9 +244,7 @@ I am sniffing in channel 157 with 80MHz bandwidth as my target network is operat
 7. Now as you are sniffing in the same channel as your network, you shoud be able to find the NDP and beamforming feedback by searching the keywords "NDP" and "feedback" (select regular expression in the search type).
 8. If you are getting some packets with NDP and Feedback, you are surely beamforming. if not, try with lower number of antenna and spatial stream of the STAs and taking the STAs further away from each other. My suggestion is to start with 2 STAs each with 1 antenna and 1 spatial stream. whereas the AP must haave atleast 2 antennas and 2 spatial stream and keep the devices 5-10 meter away from each other.  
 
-
-
-## 4. Accessing and Configuring the Network Remotely
+### 4. Accessing and Configuring the Network Remotely
 
 Now, in case of Rover Offloading, the AP will be on top of the Rover and the STAs will be at the ground primarily. However, in this case, we can not have the wires access to each of the devices (AP and STAs) as the AP will be on the fly and the STAs will be scattered in an open field or Rover testbed.
 
@@ -259,7 +257,7 @@ For this we equiped the jetson with NICs (AX200) and antennas. and connect them 
      style="float: center;" />
      
      
-## 5. Data Offloading
+### 5. Data Offloading
 
 For data offloading from rover to the ground STA, we need to equip the devices -the routers (both AO and STAs) with external storage. **Dont save the files in root directory** which will worn out the flash storage ultimately causing to fail the device or the data will be lost if it is more than the flash storage.
 
