@@ -130,10 +130,11 @@ Now, let's setup the MU-MIMO
 ································································································································································································
 
 ### 3. Setup the MU-MIMO
-
+<p align="center">
 <img src="../Images/Basic_MU-MIMO.jpg"
      alt="Markdown Monster icon" width="700" height="500"
      style="float: center;" />
+</p>
 
 For setting up a MU-MIMO system with IEEE802.11ac, at first we need to setup a network with proper configuration. For this, the required configuration files are provided in "MU-MIMO_Configuration" folder. 
 
@@ -251,12 +252,12 @@ Now, in case of Rover Offloading, the AP will be on top of the Rover and the STA
 To address this, we create a separate wireless network with jetson nanos and connect them with the devices (AP and STAs) with ethernet. In that way, being in the second wireless network, the host machine ssh to the jetson and then from inside the jetson, ssh to the devices (AP and STAs) to change the configutration on the fly. It it mentionable that, the AP of the second wireless network can be at the center of the rover testbed giving us the omnidirectional coverage. 
 
 For this we equiped the jetson with NICs (AX200) and antennas. and connect them as shown in the figure: 
-
-<img src="Images/Basic_MU-MIMO_Jetson.jpg"
+<p align="center">
+<img src="../Images/Basic_MU-MIMO_Jetson.jpg"
      alt="Markdown Monster icon" width="700" height="500"
      style="float: center;" />
-     
-     
+</p>
+
 ### 5. Data Offloading
 
 For data offloading from rover to the ground STA, we need to equip the devices -the routers (both AO and STAs) with external storage. **Dont save the files in root directory** which will worn out the flash storage ultimately causing to fail the device or the data will be lost if it is more than the flash storage.
@@ -269,11 +270,11 @@ Let's format the external drives in ext4 format before plugging them in. Once pl
 ls -l /dev/sd*
 ```
 You should see something like this: 
-
-<img src="Images/SS_1.png"
+<p align="center">
+<img src="../Images/SS_1.png"
      alt="Markdown Monster icon" width="700" height="80"
      style="float: center;" />
-
+</p>
 Let's create the file system: 
 ```
 mkfs.ext4 /dev/sda1
