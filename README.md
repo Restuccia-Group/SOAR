@@ -1,8 +1,9 @@
 # SOAR: Semantic Multi-User MIMO Communications for Reliable Wireless Edge Computing 
 
-In this project, we investigate the various challenges of Data offloading from drone to the ground stations exploiting the downlink beamforming with multiple receive & sending antenna as well as streams. We intend to address the challenges with State-Of-The-Art Deep Learning techniques by defining the required offloading stratagies. 
 
-For the  drone offloading task, we consider IEEE 802.11ac / 11 ax Multi User Multiple Input Multiple Output (MU-MIMO) system where Drones will be offloading various tasks like image detection, classification or segmentation to the  ground stations. Thus, the Drone is considered as the Access Point (AP) whereas the ground nodes are the Stations (STA) of the MU-MIMO system. 
+In these experiments, we investigate the various challenges of Data offloading from rover to the ground stations exploiting the downlink beamforming with multiple receive & sending antenna as well as streams. 
+
+For the  rover offloading task, we consider IEEE 802.11ac / 11 ax Multi User Multiple Input Multiple Output (MU-MIMO) system where Rovers will be offloading various tasks like image detection, classification or segmentation to the  ground stations. Thus, the Rover is considered as the Access Point (AP) whereas the ground nodes are the Stations (STA) of the MU-MIMO system. 
 
 We devide this whole system into several sections as follows: 
 
@@ -210,9 +211,9 @@ I am sniffing in channel 157 with 80MHz bandwidth as my target network is operat
 
 ## 4. Accessing and Configuring the Network Remotely
 
-Now, in case of Drone Offloading, the AP will be on top of the Drone and the STAs will be at the ground primarily. However, in this case, we can not have the wires access to each of the devices (AP and STAs) as the AP will be on the fly and the STAs will be scattered in an open field or Drone testbed.
+Now, in case of Rover Offloading, the AP will be on top of the Rover and the STAs will be at the ground primarily. However, in this case, we can not have the wires access to each of the devices (AP and STAs) as the AP will be on the fly and the STAs will be scattered in an open field or Rover testbed.
 
-To address this, we create a separate wireless network with jetson nanos and connect them with the devices (AP and STAs) with ethernet. In that way, being in the second wireless network, the host machine ssh to the jetson and then from inside the jetson, ssh to the devices (AP and STAs) to change the configutration on the fly. It it mentionable that, the AP of the second wireless network can be at the center of the drone testbed giving us the omnidirectional coverage. 
+To address this, we create a separate wireless network with jetson nanos and connect them with the devices (AP and STAs) with ethernet. In that way, being in the second wireless network, the host machine ssh to the jetson and then from inside the jetson, ssh to the devices (AP and STAs) to change the configutration on the fly. It it mentionable that, the AP of the second wireless network can be at the center of the rover testbed giving us the omnidirectional coverage. 
 
 For this we equiped the jetson with NICs (AX200) and antennas. and connect them as shown in the figure: 
 
@@ -223,7 +224,7 @@ For this we equiped the jetson with NICs (AX200) and antennas. and connect them 
      
 ## 5. Data Offloading
 
-For data offloading from drone to the ground STA, we need to equip the devices -the routers (both AO and STAs) with external storage. **Dont save the files in root directory** which will worn out the flash storage ultimately causing to fail the device or the data will be lost if it is more than the flash storage.
+For data offloading from rover to the ground STA, we need to equip the devices -the routers (both AO and STAs) with external storage. **Dont save the files in root directory** which will worn out the flash storage ultimately causing to fail the device or the data will be lost if it is more than the flash storage.
 
 Thus we plug in external storage to the R7800 which fortunately support the external USB storages. 
 
