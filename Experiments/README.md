@@ -2,13 +2,13 @@
 
 ## A. Experiments Configuration: 
 
-### The metrics that we are going to measure: 
+### Metrics collected: 
 		(i) Latency				(Netcat)	
 		(ii) Packet loss and 			(Netcat)
 		(iii) Throughput 			(iperf3)
 
 
-### Different Configurations to collect the data: 
+### AP and STA configurations: 
 
 #### (i) One AP One STA (The stations will always have one antenna and one spatial stream enabled)
 
@@ -31,10 +31,8 @@
 
 ### Repeat the test (i) with following configurations: 
 
-			** 	One AP, two STA
-			** 	One AP, three STA
-			***	One AP, Four STA
-			****  	One AP, Five STA	
+			** 	One AP, one STA
+			*** 	One AP, two STA
 
 ## B. Equipment Setup:
 
@@ -49,7 +47,8 @@ We devide this whole system into several sections as follows:
 ##### **3. Setup the MU-MIMO**
 ##### **4. Accessing and Configuring the Network Remotely**
 ##### **5. Data Offloading** 
-······························
+································································································································································································
+
 ### 1. Device Configurations 
 
 For the flexibility of the different configurations of MU-MIMO we use Netgear Nighthawk R7800 router as both AP and STAs which supports IEEE 802.11ac. Our first step would be to flash the routers with OpenWrt which allows us to exploit tools like iw, ifconfig, hostapd etc. We will go with the TFTP flashing which is more easier and convenient than that of the other exixting flashing processes. Please find the openwrt-22.03.2 image (which we will flash) for the R7800 in Device_Configuration folder.
@@ -86,7 +85,7 @@ quit
 5. After it boots, it should have the default IP of OpenWrt which is "192.168.1.1". Try to ping "192.168.1.1" from the host PC. 
 
 6. If the pinging works fine, go ahead with  ``` ssh root@192.168.1.1``` and we should be logged in as by default, no password is set.   
-
+································································································································································································
 
 ### 2. Installing Required Packages
 For installing packages, we have two choices, (i) download the required packages in "ipk" format in host PC, scp the file to the R7800, and install with opkg. 
@@ -127,6 +126,7 @@ opkg install kmod-fs-ext4
 I assume, your PC is still connected to the R7800 with an ethernet cable, thus access the GUI, by browsing ```192.168.1.1``` from a browser. login with username "admin" and keep the password field blank. Find the wireless tab in the luci (GUI) and scan for your hotspot. Now, you can install the required packages. 
 
 Now, let's setup the MU-MIMO
+································································································································································································
 
 ### 3. Setup the MU-MIMO
 
@@ -214,7 +214,6 @@ iperf3 -c 192.168.10.x -u -b 10G -t 300 -P 30
 here 192.168.10.x is the STA IP. For three different STAs, start the *iperf* client like above command in three different terminal window of AP. 
 
 #### ******************************Remember to select the the WLAN IP*****************************
-
 
 #### Let's See if they Beamform !! 
 
