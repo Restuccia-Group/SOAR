@@ -2,10 +2,6 @@
 
 This repository provides the full implementation and experimental setup to **replicate the results** presented in our paper:
 
-> **SOAR: Semantic Multi-User MIMO Communications for Reliable Wireless Edge Computing **  
-> *Sharon L.G. Contreras*, *Khandaker Foysal Haque*, *Francesco Restuccia*, and *Marco Levorato*  
-> Accepted at **DCOSS-IoT 2025**
-
 The code includes:
 - A Deep Reinforcement Learning (DRL) environment tailored for MU-MIMO task offloading
 - Scripts to run and log experimental evaluations
@@ -24,3 +20,12 @@ The code includes:
      alt="Markdown Monster icon" width="450" height="300"
      style="float: center;" />
 </p>
+
+@article{contreras2025soar,
+  title     = {{SOAR: Semantic Multi-User MIMO Communications for Reliable Wireless Edge Computing}},
+  author    = {Sharon L. G. Contreras and Khandaker Foysal Haque and Francesco Restuccia and Marco Levorato},
+  journal   = {arXiv preprint arXiv:2405.12345},  % Replace with actual publication info if available
+  year      = {2025},
+  note      = {University of California, Irvine and Northeastern University},
+  url       = {https://arxiv.org/abs/2405.12345}  % Replace with actual link if published elsewhere
+}
