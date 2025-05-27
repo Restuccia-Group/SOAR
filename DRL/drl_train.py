@@ -2,7 +2,7 @@ import gymnasium as gym
 from sb3_contrib import QRDQN
 from environment import SOAR 
 
-all_data = '/home/sharon/Documents/Research/Drones-Offloading/output/FPS/deadline/dup_strategies/dataset_for_drl/sample.csv'
+all_data = '../sample.csv'
 scen = 'aldrich'
 thr = 10
 
