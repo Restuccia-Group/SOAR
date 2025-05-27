@@ -20,7 +20,7 @@ The code includes:
 
 If you find our work useful, please cite us:
 
-> L.G. Contreras, S., Haque, F., Levorato, M., & Restuccia, F.  
+> L.G. Contreras, S., Haque, KF., Levorato, M., & Restuccia, F.  
 > *SOAR: Semantic MU-MIMO Communications for Reliable Offloading of Computer Vision Tasks*.  
 > IEEE International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IOT), IEEE, 2025. In press.
 
