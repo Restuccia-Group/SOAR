@@ -2,7 +2,7 @@
 
 Reliability (SOAR), a task-oriented multi-user MIMO framework for wireless edge computing executing vision tasks, e.g. object detection and image classification. SOAR pipeline uses distributional deep reinforcement learning (DDRL) agents with a multi-branched context-aware neural network.
 
-This repository provides the full implementation and experimental setup to **replicate the results** presented in our paper:
+This repository provides the full implementation and experimental setup to replicate the results presented in our paper:
 
 The code includes:
 - *DRL*: A Deep Reinforcement Learning (DRL) environment tailored for MU-MIMO task offloading
