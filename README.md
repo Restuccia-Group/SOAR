@@ -28,7 +28,7 @@ If you find our work useful, please cite us:
 
 ```bibtex
 @inproceedings{contreras2025soar,
-  author    = {L.G. Contreras, Sharon and Haque, Foysal and Levorato, Marco and Restuccia, Francesco},
+  author    = {L.G. Contreras, Sharon and Haque, Khandaker Foysal and Levorato, Marco and Restuccia, Francesco},
   title     = {{SOAR: Semantic MU-MIMO Communications for Reliable Offloading of Computer Vision Tasks}},
   booktitle = {IEEE International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IOT)},
   year      = {2025},
