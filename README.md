@@ -5,10 +5,10 @@ Reliability (SOAR), a task-oriented multi-user MIMO framework for wireless edge 
 This repository provides the full implementation and experimental setup to **replicate the results** presented in our paper:
 
 The code includes:
-- DRL: A Deep Reinforcement Learning (DRL) environment tailored for MU-MIMO task offloading
-- System Packages and Experiments: Scripts to run and log experimental evaluations
-- Experiments: Configurations and setup instructions to reproduce all figures and metrics from the paper
-- Test Corruption: Computer vision task corruption test
+- *DRL*: A Deep Reinforcement Learning (DRL) environment tailored for MU-MIMO task offloading
+- *System Packages & Experiments*: Scripts to run and log experimental evaluations
+- *Experiments*: Configurations and setup instructions to reproduce all figures and metrics from the paper
+- *Test Corruption*: Computer vision task corruption test
 
 <p align="center">
 <img src="Images/SOAR_pipeline_v2.png"
