@@ -15,8 +15,3 @@ The code includes:
      style="float: center;" />
 </p>
 
-<p align="center">
-<img src="Images/SOAR-Setting.png"
-     alt="Markdown Monster icon" width="450" height="300"
-     style="float: center;" />
-</p>
