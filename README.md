@@ -2,7 +2,7 @@
 
 <p align="center">
 <img src="Images/SOAR_pipeline_v2.png"
-     alt="Markdown Monster icon" width="900" height="300"
+     alt="Markdown Monster icon" width="900" height="250"
      style="float: center;" />
 </p>
 
