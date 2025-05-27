@@ -1,50 +1,17 @@
 # SOAR: Semantic Multi-User MIMO Communications for Reliable Wireless Edge Computing 
 
-This repository contains the core components, datasets, configurations, and scripts used for our research and experiments involving Deep Reinforcement Learning (DRL), MU-MIMO systems, and real-world dataset analysis.
+This repository provides the full implementation and experimental setup to **replicate the results** presented in our paper:
+
+> **SOAR: Semantic Multi-User MIMO Communications for Reliable Wireless Edge Computing **  
+> *Sharon L.G. Contreras*, *Khandaker Foysal Haque*, *Francesco Restuccia*, and *Marco Levorato*  
+> Accepted at **DCOSS-IoT 2025**
+
+The code includes:
+- A Deep Reinforcement Learning (DRL) environment tailored for MU-MIMO task offloading
+- Scripts to run and log experimental evaluations
+- Configurations to reproduce all figures and metrics from the paper
 
 ---
-
-## 📁 Folder Structure
-
-### 🔍 `Corruption Test`
-Scripts for evaluating model robustness under synthetic and real-world corruptions.
-
-### 🤖 `DRL`
-Training and evaluation code for deep reinforcement learning agents in wireless communication environments.
-
-### 📊 `Dataset`
-Preprocessed datasets used for training, validation, and corruption testing.
-
-### 🧪 `Experiments`
-Experiment configurations, logs, and result summaries.
-
-### 🖼️ `Images`
-Figures and diagrams used in reports or publications.
-
-### 📶 `MU-MIMO Configuration`
-Configuration files for MU-MIMO simulations and signal processing pipelines.
-
-### 📦 `System Packages`
-Scripts and files for setting up dependencies and system environment.
-
-### 🛠️ `Utils`
-General-purpose utilities for data handling, logging, and visualization.
-
----
-
-## 📄 Related Publications
-
-If you use this code or data in your research, please cite the following papers:
-
-- **[Author Name], et al.**, *Context-Aware Offloading with DRL in MU-MIMO Systems*, in Proceedings of IEEE MILCOM, 2024.  
-  `[BibTeX]`
-  ```bibtex
-  @inproceedings{your2024milcom,
-    author    = {Sharon L. de Guevara and Marco Levorato},
-    title     = {Context-Aware Offloading with DRL in MU-MIMO Systems},
-    booktitle = {Proc. IEEE Military Communications Conference (MILCOM)},
-    year      = {2024}
-  }
 
 <p align="center">
 <img src="Images/SOAR_pipeline_v2.png"
