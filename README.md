@@ -6,7 +6,7 @@ This repository provides the full implementation and experimental setup to repli
 
 The code includes:
 - *DRL*: A Deep Reinforcement Learning (DRL) environment tailored for MU-MIMO task offloading
-- *System Packages & Experiments*: Scripts to run and log experimental evaluations
+- *System Packages, Experiments & Data Transmission*: Scripts to run and log experimental evaluations
 - *Experiments*: Configurations and setup instructions to reproduce all figures and metrics from the paper
 - *Test Corruption*: Computer vision task corruption test
 
