@@ -15,3 +15,24 @@ The code includes:
      style="float: center;" />
 </p>
 
+## Citation
+
+If you find our work useful, please cite us:
+
+> L.G. Contreras, S., Haque, F., Levorato, M., & Restuccia, F.  
+> *SOAR: Semantic MU-MIMO Communications for Reliable Offloading of Computer Vision Tasks*.  
+> IEEE International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IOT), IEEE, 2025. In press.
+
+**Cite us:**
+
+```bibtex
+@inproceedings{contreras2025soar,
+  author    = {L.G. Contreras, Sharon and Haque, Foysal and Levorato, Marco and Restuccia, Francesco},
+  title     = {{SOAR: Semantic MU-MIMO Communications for Reliable Offloading of Computer Vision Tasks}},
+  booktitle = {IEEE International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IOT)},
+  year      = {2025},
+  note      = {In press},
+  publisher = {IEEE}
+}
+
+
