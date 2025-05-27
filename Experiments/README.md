@@ -1,4 +1,4 @@
-# MU-MIMO Rover Offloading Experiments
+# Step-by-Step Guide for MU-MIMO Rover Offloading Experiments
 
 ## A. Experiments Configuration: 
 
